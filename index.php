@@ -12,7 +12,7 @@
 
 </head>
 <body>
-  <!--div class="container"-->
+ 
 <nav>
 
     <ul>
@@ -33,13 +33,28 @@
     </ul>
   </nav>
   
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+  <ul class="navbar-nav me-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Welcome guest</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Login</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="bg-light">
+  <h3 class="text-center">Hidden store</h3>
+  <p class="text-center">Communication is at the heart of e-commerce and community</p>
+  
+
+</div>
 
 
-
-
-  <div class="footer">
+  <!-- <div class="footer">
     <p>All right reserved o- designed by chanuka-2024</p>
-  </div>
+  </div> -->
   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
