@@ -1,8 +1,10 @@
-body {
+* {
+  
     margin: 0;
     font-family: Arial, sans-serif;
+
   }
-  
+
   nav {
     background-color: #333;
   }
@@ -30,8 +32,20 @@ body {
     background-color: #111;
   }
   
-  li#total-price {
-    float: right;
-    padding-right: 20px;
+  nav .kill{
+     padding-right: 60px;
+
   }
-  
+ .cool{
+  padding: 20px;
+  text-decoration: solid;
+ }
+ .footer{
+  padding: 3px;
+  background-color: rgba(19, 17, 17, 0.568);
+  text-align: center;
+ }
+ .img{
+  height: 5%;
+  width: 5%;
+ }
