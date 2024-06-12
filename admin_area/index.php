@@ -12,8 +12,19 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-info">
         <div class="container-fluid">
          <img src="../images/logo.jpeg" alt="" class="logo">
+         <nav class="navbar navbar-expand-lg ">
+           <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="" class="nav-lik">Welcome guest</a>
+            </li>
+           </ul>
+
+         </nav>
         </div>
     </nav>
+    <div class="bg-light">
+        <h3 class="text-center p-2">Manage Details</h3>
+    </div>
   </div>  
 
 
