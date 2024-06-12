@@ -56,7 +56,7 @@
     <div class="row">
      <div class="col-md-4 mb-2">
      <div class="card" >
-  <img src="./images/apple.webp" class="card-img-top" alt="apple">
+      <img src="./images/apple.webp" height:200px; class="card-img-top" alt="apple">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -67,7 +67,7 @@
      </div>
      <div class="col-md-4 mb-2">
      <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <img src="./images/apple.webp" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -78,7 +78,7 @@
      </div>
      <div class="col-md-4 mb-2">
      <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <img src="./images/apple.webp" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -133,15 +133,21 @@
      </div>
     </div>
   </div>
-  <div class="col-md-2">
+  <div class="col-md-2 bg-secondary p-0">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item bg-info">
+        <a href="#" class="nav-link text-light">Delivery Brands</a>
+      </li>
 
+
+    </ul>
   </div>
 </div>
 
 
-  <!-- <div class="footer">
+  <div class="footer">
     <p>All right reserved o- designed by chanuka-2024</p>
-  </div> -->
+  </div> 
   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
