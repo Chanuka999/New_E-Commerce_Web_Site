@@ -67,7 +67,7 @@
      </div>
      <div class="col-md-4 mb-2">
      <div class="card" style="width: 18rem;">
-  <img src="./images/apple.webp" class="card-img-top" alt="...">
+  <img src="./images/chocolate.webp" class="card-img-top" alt="chocolate">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -134,9 +134,46 @@
     </div>
   </div>
   <div class="col-md-2 bg-secondary p-0">
-    <ul class="navbar-nav me-auto">
+    <ul class="navbar-nav me-auto text-center">
       <li class="nav-item bg-info">
-        <a href="#" class="nav-link text-light">Delivery Brands</a>
+        <a href="#" class="nav-link text-light"><h4>Delivery Brands</h4></a>
+      </li>
+      <li class="nav-item ">
+        <a href="#" class="nav-link text-light">Brand1</a>
+      </li>
+      <li class="nav-item ">
+        <a href="#" class="nav-link text-light">Brand2</a>
+      </li>
+      <li class="nav-item ">
+        <a href="#" class="nav-link text-light">Brand3</a>
+      </li>
+      <li class="nav-item ">
+        <a href="#" class="nav-link text-light">Brand4</a>
+      </li>
+      <li class="nav-item ">
+        <a href="#" class="nav-link text-light">Brand5</a>
+      </li>
+
+
+    </ul>
+    <ul class="navbar-nav me-auto text-center">
+      <li class="nav-item bg-info">
+        <a href="#" class="nav-link text-light"><h4>categories</h4></a>
+      </li>
+      <li class="nav-item ">
+        <a href="#" class="nav-link text-light">Categories1</a>
+      </li>
+      <li class="nav-item ">
+        <a href="#" class="nav-link text-light">Categories2</a>
+      </li>
+      <li class="nav-item ">
+        <a href="#" class="nav-link text-light">Categories3</a>
+      </li>
+      <li class="nav-item ">
+        <a href="#" class="nav-link text-light">Categories4</a>
+      </li>
+      <li class="nav-item ">
+        <a href="#" class="nav-link text-light">Categories5</a>
       </li>
 
 
