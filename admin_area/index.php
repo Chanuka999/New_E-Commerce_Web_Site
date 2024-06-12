@@ -25,6 +25,14 @@
     <div class="bg-light">
         <h3 class="text-center p-2">Manage Details</h3>
     </div>
+    <div class="row">
+        <div class="col-md-12 bg-secondary p-1">
+         <div>
+            <a href="#"><img src="../images/images.jpeg" alt=""></a>
+            <p class="text-light text-center">Admin Name</p>
+         </div>
+        </div>
+    </div>
   </div>  
 
 
