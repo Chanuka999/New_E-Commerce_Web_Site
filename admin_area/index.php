@@ -11,6 +11,11 @@
           width: 100px;
           object-fit: contain;
        }
+       .footerr{
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(33, 136, 177, 0.568);
+       }
     </style>
 </head>
 <body>
@@ -32,30 +37,33 @@
         <h3 class="text-center p-2">Manage Details</h3>
     </div>
     <div class="row">
-        <div class="col-md-12 bg-secondary p-1">
-         <div>
+        <div class="col-md-12 bg-secondary p-1 d-flex align-items-center">
+         <div class="p-3">
             <a href="#"><img src="../images/images.jpeg" alt="" class="admin-image"></a>
             <p class="text-light text-center">Admin Name</p>
          </div>
          <!--   -->
          <div class="button text-center">
-          <button><a href="" class="nav-link text-light bg-info my-1"></a></button>
-          <button><a href="" class="nav-link text-light bg-info my-1"></a></button>
-          <button><a href="" class="nav-link text-light bg-info my-1"></a></button>
-          <button><a href="" class="nav-link text-light bg-info my-1"></a></button>
-          <button><a href="" class="nav-link text-light bg-info my-1"></a></button>
-          <button><a href="" class="nav-link text-light bg-info my-1"></a></button>
-          <button><a href="" class="nav-link text-light bg-info my-1"></a></button>
-          <button><a href="" class="nav-link text-light bg-info my-1"></a></button>
-          <button><a href="" class="nav-link text-light bg-info my-1"></a></button>
-          <button><a href="" class="nav-link text-light bg-info my-1"></a></button>
+          <button class="my-3"><a href="" class="nav-link text-light bg-info my-1 ">Insert Products</a></button>
+          <button><a href="" class="nav-link text-light bg-info my-1">View Products</a></button>
+          <button><a href="" class="nav-link text-light bg-info my-1">Insert Categories</a></button>
+          <button><a href="" class="nav-link text-light bg-info my-1">View Categories</a></button>
+          <button><a href="" class="nav-link text-light bg-info my-1">Insert Brands</a></button>
+          <button><a href="" class="nav-link text-light bg-info my-1">View Brands</a></button>
+          <button><a href="" class="nav-link text-light bg-info my-1">All Orders</a></button>
+          <button><a href="" class="nav-link text-light bg-info my-1">All payment</a></button>
+          <button><a href="" class="nav-link text-light bg-info my-1">List Users</a></button>
+          <button><a href="" class="nav-link text-light bg-info my-1">Logout</a></button>
 
          </div>
         </div>
     </div>
   </div>  
 
-
+  <div class="footerr">
+    <p>All right reserved o- designed by chanuka-2024</p>
+  </div> 
+  
 
 
 
