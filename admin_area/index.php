@@ -60,13 +60,20 @@
          </div>
         </div>
     </div>
-  </div>  
+   
+   <div class="container my-5">
+    <?php   
+    if(isset($_GET['insert_category'])){
+      include('insert_categories.php');
+    }
+    ?>
+   </div>
 
   <div class="footerr">
     <p>All right reserved o- designed by chanuka-2024</p>
   </div> 
   
-
+      </div>
 
 
 
