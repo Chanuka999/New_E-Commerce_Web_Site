@@ -1,3 +1,17 @@
+<?php  
+include('../includes/connect.php');
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 <form action="" method="post" class="mb-2">
     <div class="input-group w-90 mb-2">
         <span class="input-group-text bg-info" id="basic-addon1"><i class="fa-solid fa-receipt"></i></span>
@@ -11,3 +25,5 @@
 
     </div> 
 </form>
+</body>
+</html>
