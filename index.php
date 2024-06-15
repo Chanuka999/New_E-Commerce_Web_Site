@@ -1,6 +1,6 @@
 <?php 
 
-include('include/connect.php');
+include('includes/connect.php');
 
 ?>
 <!DOCTYPE html>
@@ -147,7 +147,17 @@ include('include/connect.php');
       
       $select_brands="Select * from `brands`";
       $result_brands=mysqli_query($con,$select_brands);
+     // $row_data=mysqli_fetch_assoc($result_brands);
+     // echo $row_data['brand_title'];
+     // echo $row_data['brand_title'];
+     while($row_data=mysqli_fetch_assoc($result_brands)){
+      $brand_title=$row_data['brand_title'];
+      $brand_id=$row_data['barnd_id'];
+      echo "<li class='nav-item">
+      <a href='index.php?brand=$brand_id' class="nav-link-light" text-light>Brand _title</a>
 
+
+     }
       
       ?>
       <li class="nav-item ">
