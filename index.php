@@ -150,34 +150,17 @@ include('includes/connect.php');
      // $row_data=mysqli_fetch_assoc($result_brands);
      // echo $row_data['brand_title'];
      // echo $row_data['brand_title'];
-     while($row_data=mysqli_fetch_assoc($result_brands)){
+    while($row_data=mysqli_fetch_assoc($result_brands)){
       $brand_title=$row_data['brand_title'];
-      $brand_id=$row_data['barnd_id'];
-      echo "<li class='nav-item">
-      <a href='index.php?brand=$brand_id' class="nav-link-light" text-light>Brand _title</a>
-
-
+      $brand_id=$row_data['brand_id'];
+       echo "<li class='nav-item'>
+       <a href='#' class='nav-light text-light'>$brand_title</a>
+        </li>";
+     
      }
       
       ?>
-      <li class="nav-item ">
-        <a href="#" class="nav-link text-light">Brand1</a>
-      </li>
-      <li class="nav-item ">
-        <a href="#" class="nav-link text-light">Brand2</a>
-      </li>
-      <li class="nav-item ">
-        <a href="#" class="nav-link text-light">Brand3</a>
-      </li>
-      <li class="nav-item ">
-        <a href="#" class="nav-link text-light">Brand4</a>
-      </li>
-      <li class="nav-item ">
-        <a href="#" class="nav-link text-light">Brand5</a>
-      </li>
-
-
-    </ul>
+    
     <ul class="navbar-nav me-auto text-center">
       <li class="nav-item bg-info">
         <a href="#" class="nav-link text-light"><h4>categories</h4></a>
