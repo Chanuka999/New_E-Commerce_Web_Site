@@ -154,7 +154,7 @@ include('includes/connect.php');
       $brand_title=$row_data['brand_title'];
       $brand_id=$row_data['brand_id'];
        echo "<li class='nav-item'>
-       <a href='#' class='nav-light text-light'>$brand_title</a>
+       <a href='index.php?brand=$brand_id' class='nav-light text-light'>$brand_title</a>
         </li>";
      
      }
@@ -162,25 +162,26 @@ include('includes/connect.php');
       ?>
     
     <ul class="navbar-nav me-auto text-center">
-      <li class="nav-item bg-info">
-        <a href="#" class="nav-link text-light"><h4>categories</h4></a>
+      <li class="nav-item bg-info ">
+        <a href="#" class="nav-link text-light "><h4>categories</h4></a>
       </li>
-      <li class="nav-item ">
-        <a href="#" class="nav-link text-light">Categories1</a>
-      </li>
-      <li class="nav-item ">
-        <a href="#" class="nav-link text-light">Categories2</a>
-      </li>
-      <li class="nav-item ">
-        <a href="#" class="nav-link text-light">Categories3</a>
-      </li>
-      <li class="nav-item ">
-        <a href="#" class="nav-link text-light">Categories4</a>
-      </li>
-      <li class="nav-item ">
-        <a href="#" class="nav-link text-light">Categories5</a>
-      </li>
-
+      <?php   
+      
+      $select_categories="Select * from `categories`";
+      $result_categories=mysqli_query($con,$select_categories);
+     // $row_data=mysqli_fetch_assoc($result_brands);
+     // echo $row_data['brand_title'];
+     // echo $row_data['brand_title'];
+    while($row_data=mysqli_fetch_assoc($result_categories)){
+      $category_title=$row_data['category_title'];
+      $category_id=$row_data['category_id'];
+       echo "<li class='nav-item'>
+       <a href='index.php?category=$category_id' class='nav-light text-light'>$category_title</a>
+        </li>";
+     
+     }
+      
+      ?>
 
     </ul>
   </div>
