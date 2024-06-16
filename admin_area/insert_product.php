@@ -9,6 +9,7 @@ if(isset($_POST['insert_product'])){
     $product_category=$_POST['product_category'];
     $product_brands=$_POST['product_brands'];
     $product_price=$_POST['product_price'];
+    $product_status='true';
 
 
 
@@ -32,6 +33,15 @@ if(isset($_POST['insert_product'])){
         move_uploaded_file($temp_image1,"./product_images/$product_image1");
         move_uploaded_file($temp_image2,"./product_images/$product_image2");
         move_uploaded_file($temp_image3,"./product_images/$product_image3");
+
+
+        $insert_products="insert into `products` (product_title,product_discription,product_keywords,category_id,
+        brand_id,product_image1,product_image2,product_image3,product_price,date,status) values('$product_title','$product_discription','prodct_keywords','$product_category',
+        '$product_brands','$product_image1','$product_image2','$product_image3','$product_price',NOW(),'$product_status'";
+        $result_query=mysqli_query($con,$insert_products);
+        if($result_query){
+            echo "<script>alert('successfully inserted the products')</script>";
+        }
       }
 }
 
