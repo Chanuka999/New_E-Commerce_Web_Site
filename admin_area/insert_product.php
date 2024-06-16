@@ -16,7 +16,11 @@ if(isset($_POST['insert_product'])){
     $product_image2=$_POST['product_image2']['name'];
     $product_image3=$_POST['produvt_image3']['name'];
 
-    
+
+    $product_image1=$_POST['product_image1']['tmp_name'];
+    $product_image2=$_POST['product_image2']['tmp_name'];
+    $product_image3=$_POST['produvt_image3']['tmp_name'];
+
 }
 
 ?>
