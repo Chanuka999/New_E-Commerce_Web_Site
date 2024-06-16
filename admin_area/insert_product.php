@@ -41,15 +41,16 @@ include('../includes/connect.php');
                <select name="product_categories" id="" class="form-select">
                 <option value="">select a categories</option>
                <?php   
-               $select_query="se;lect * from `categories`";
+               $select_query="select * from `categories`";
                $result_query=mysqli_query($con,$select_query);
                while($row=mysqli_fetch_assoc($result_query)){
                 $category_title=$row['category_title'];
                 $category_id=$row['category_id'];
+                echo "<option value=''>$category_title</option>";
                }
                
                ?>
-                <option value=""></option>
+                 
                </select>
                 
             </div>
