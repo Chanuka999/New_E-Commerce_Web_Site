@@ -17,10 +17,22 @@ if(isset($_POST['insert_product'])){
     $product_image3=$_POST['produvt_image3']['name'];
 
 
-    $product_image1=$_POST['product_image1']['tmp_name'];
-    $product_image2=$_POST['product_image2']['tmp_name'];
-    $product_image3=$_POST['produvt_image3']['tmp_name'];
+    $temp_image1=$_POST['product_image1']['tmp_name'];
+    $temp_image2=$_POST['product_image2']['tmp_name'];
+    $temp_image3=$_POST['produvt_image3']['tmp_name'];
 
+
+     if($product_title=='' or $product_discription=='' 
+     or $product_keywords=='' or $product_category==''
+      or $product_brands=='' or $product_price=='' 
+      or $product_image1=='' or $product_image2=='' or $product_image3==''){
+        echo "<script>alert('pleade fill all tha avilable fields')</script>";
+        exit();
+      }else{
+        move_uploaded_file($temp_image1,"./product_images/$product_image1");
+        move_uploaded_file($temp_image2,"./product_images/$product_image2");
+        move_uploaded_file($temp_image3,"./product_images/$product_image3");
+      }
 }
 
 ?>
