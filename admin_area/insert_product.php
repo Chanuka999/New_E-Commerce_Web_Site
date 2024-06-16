@@ -13,14 +13,14 @@ if(isset($_POST['insert_product'])){
 
 
 
-    $product_image1=$_POST['product_image1']['name'];
-    $product_image2=$_POST['product_image2']['name'];
-    $product_image3=$_POST['produvt_image3']['name'];
+    $product_image1=$_FILES['product_image1']['name'];
+    $product_image2=$_FILES['product_image2']['name'];
+    $product_image3=$_FILES['product_image3']['name'];
 
 
-    $temp_image1=$_POST['product_image1']['tmp_name'];
-    $temp_image2=$_POST['product_image2']['tmp_name'];
-    $temp_image3=$_POST['produvt_image3']['tmp_name'];
+    $temp_image1=$_FILES['product_image1']['tmp_name'];
+    $temp_image2=$_FILES['product_image2']['tmp_name'];
+    $temp_image3=$_FILES['product_image3']['tmp_name'];
 
 
      if($product_title=='' or $product_discription=='' 
@@ -35,9 +35,9 @@ if(isset($_POST['insert_product'])){
         move_uploaded_file($temp_image3,"./product_images/$product_image3");
 
 
-        $insert_products="insert into `products` (product_title,product_discription,product_keywords,category_id,
-        brand_id,product_image1,product_image2,product_image3,product_price,date,status) values('$product_title','$product_discription','prodct_keywords','$product_category',
-        '$product_brands','$product_image1','$product_image2','$product_image3','$product_price',NOW(),'$product_status'";
+        $insert_products="insert into `products` (product_title,product_disription,product_keywords,category_id,
+        brand_id,product_image1,product_image2,product_image3,product_price,date,status) values ('$product_title','$product_discription','$product_keywords','$product_category',
+        '$product_brands','$product_image1','$product_image2','$product_image3','$product_price',NOW(),'$product_status')";
         $result_query=mysqli_query($con,$insert_products);
         if($result_query){
             echo "<script>alert('successfully inserted the products')</script>";
@@ -81,7 +81,7 @@ if(isset($_POST['insert_product'])){
                 
             </div>
             <div class="form-outline mb-4 w-50 m-auto">
-               <select name="product_categories" id="" class="form-select">
+               <select name="product_category" id="" class="form-select">
                 <option value="">select a categories</option>
                <?php   
                $select_query="select * from `categories`";
@@ -98,7 +98,7 @@ if(isset($_POST['insert_product'])){
                 
             </div>
             <div class="form-outline mb-4 w-50 m-auto">
-               <select name="product_categories" id="" class="form-select">
+               <select name="product_brands" id="" class="form-select">
                 <option value="">select a brands</option>
                 <?php   
                $select_query="select * from `brands`";
