@@ -3,13 +3,20 @@
 include('../includes/connect.php');
 if(isset($_POST['insert_product'])){
 
-    $product_title=$_POST['produvt_title'];
-    $product_discription=$_POST['produvt_discription'];
-    $product_keywords=$_POST['produvt_keywords'];
-    $product_category=$_POST['produvt_category'];
-    $product_brands=$_POST['produvt_brands'];
-    $product_price=$_POST['produvt_price'];
+    $product_title=$_POST['product_title'];
+    $product_discription=$_POST['product_discription'];
+    $product_keywords=$_POST['product_keywords'];
+    $product_category=$_POST['product_category'];
+    $product_brands=$_POST['product_brands'];
+    $product_price=$_POST['product_price'];
 
+
+
+    $product_image1=$_POST['product_image1']['name'];
+    $product_image2=$_POST['product_image2']['name'];
+    $product_image3=$_POST['produvt_image3']['name'];
+
+    
 }
 
 ?>
