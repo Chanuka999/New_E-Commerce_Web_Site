@@ -63,16 +63,16 @@ include('includes/connect.php');
     <?php 
 $select_query="Select  * from `products`";
 $result_query=mysqli_query($con,$select_query);
-$row=mysqli_fetch_assoc($result_query);
-echo $row['product_title'];
+//$row=mysqli_fetch_assoc($result_query);
+//echo $row['product_title'];
 while($row=mysqli_fetch_assoc($result_query)){
-  $product_id=$row['$product_id'];
-  $product_title=$row['$product_title'];
-  $product_description=$row['$product_description'];
-  $product_image=$row['$product_image'];
-  $product_price=$row['$product_peice'];
-  $category_id=$row['$category_id'];
-  $brand_id=$row['$brand_id'];
+  $product_id=$row['product_id'];
+  $product_title=$row['product_title'];
+  $product_disription=$row['product_disription'];
+  $product_image1=$row['product_image1'];
+  $product_price=$row['product_price'];
+  $category_id=$row['category_id'];
+  $brand_id=$row['brand_id'];
   echo $product_title;
 }
 ?> 
