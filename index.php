@@ -73,20 +73,34 @@ while($row=mysqli_fetch_assoc($result_query)){
   $product_price=$row['product_price'];
   $category_id=$row['category_id'];
   $brand_id=$row['brand_id'];
-  echo $product_title;
+  echo " <div class='col-md-4 mb-2'>
+     <div class='card' >
+      <img src='./images/apple.webp' height:200px; class='card-img-top' alt='apple'>
+  <div class='card-body'>
+    <h5 class='card-title'>Card title</h5>
+    <p class='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+   <a href='#' class='btn btn-info'>Add to cart</a>
+    <a href='#' class='btn btn-secondary'>view more</a>
+  </div>
+</div>
+</div>
+";
+ 
 }
 ?> 
-     <div class="col-md-4 mb-2">
+   <!-- <div class="col-md-4 mb-2">
      <div class="card" >
       <img src="./images/apple.webp" height:200px; class="card-img-top" alt="apple">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add to cart</a>
+   <a href="#" class="btn btn-info">Add to cart</a>
     <a href="#" class="btn btn-secondary">view more</a>
   </div>
 </div>
-</div>
+</div> -->
+
+
 </div>
   </div>
   <div class="col-md-2 bg-secondary p-0">
