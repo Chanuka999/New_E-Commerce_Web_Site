@@ -4,6 +4,9 @@ include('./includes/connect.php');
 
 function getproducts(){
     global $con;
+
+    if(!isset($_GET['category'])){
+    if(!isset($_GET['brands'])){
     $select_query="Select  * from `products` order by rand() limit 0,9";
 $result_query=mysqli_query($con,$select_query);
 //$row=mysqli_fetch_assoc($result_query);
@@ -31,7 +34,8 @@ while($row=mysqli_fetch_assoc($result_query)){
  
 }
 }
-
+}
+}
 
 function getbrands(){
     global $con;
