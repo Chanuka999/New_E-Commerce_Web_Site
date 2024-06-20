@@ -47,6 +47,12 @@ function get_unique_categories(){
    $category_id=$_GET['category'];
   $select_query="Select  * from `products` where category_id=$category_id";
 $result_query=mysqli_query($con,$select_query);
+$num_of_rows=mysqli_num_rows($result_query);
+if($num_of_rows){
+  echo "<h2 class='text-center  text-danger' >No stack for the category</h2>";
+}
+
+
 //$row=mysqli_fetch_assoc($result_query);
 //echo $row['product_title'];
 while($row=mysqli_fetch_assoc($result_query)){
