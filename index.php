@@ -19,7 +19,7 @@ include('functions/common_function.php');
 </head>
 <body>
  
-<nav>
+<nav style="background-color:blueviolet">
 
     <ul>
    
@@ -32,9 +32,9 @@ include('functions/common_function.php');
       <li><a href="#">Total Price:100/=</a></li>
      
     
-    <form class="kill">
-      <input class="form" type="search" placeholder="search" aria-label="search">
-      <button class="btn" type="submit">search</button>
+    <form class="kill" style="display:flex">
+      <input class="form me-2" type="search" placeholder="search" aria-label="search">
+      <button class="btn btn-outline-light" type="submit">search</button>
     </form>
     </ul>
   </nav>
