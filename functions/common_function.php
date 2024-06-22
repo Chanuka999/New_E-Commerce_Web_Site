@@ -140,7 +140,7 @@ $product_image1=$row['product_image1'];
 $product_price=$row['product_price'];
 $category_id=$row['category_id'];
 $brand_id=$row['brand_id'];
-echo " <div class='col-md-4 mb-2'>
+echo " <div class='col-md-4 mb-2'> 
    <div class='card' >
     <img src='./admin_area/product_images/$product_image1' height:200px; class='card-img-top' alt='$product_title'>
 <div class='card-body'>
@@ -160,13 +160,14 @@ echo " <div class='col-md-4 mb-2'>
 function search_product(){
   global $con;
 
-  if(isset($_GET['searc_data_product'])){
-   $search_data_value=$_GET['search_data'];
-  $select_query="Select  * from `products` where product_keywords like '%value%'";
-$result_query=mysqli_query($con,$select_query);
+  if(isset($_GET['search_data_product'])){
+   $search_data_value=$_GET['search_data']; 
+  $search_query="Select  * from `products` where product_keywords like '%$search_data_value%'";
+$result_query=mysqli_query($con,$search_query);
 $num_of_rows=mysqli_num_rows($result_query);
 if($num_of_rows==0){
-  echo "<h2 class='text-center  text-danger' >No stack for the category</h2>";
+  echo "<h2 class='text-center  text-danger' >No result match. No
+  products found on this category!</h2>";
 }
 
 
