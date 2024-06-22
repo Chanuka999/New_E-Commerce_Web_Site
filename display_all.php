@@ -62,7 +62,7 @@ include('functions/common_function.php');
     <div class="row">
 
     <?php 
-    getproducts();
+    get_all_products();
     get_unique_categories();
     get_unique_brands();
 
