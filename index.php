@@ -33,9 +33,9 @@ include('functions/common_function.php');
      
     
     <form class="kill" style="display:flex;">
-      <input class="form-control me-2" type="search" placeholder="search" aria-label="search" style="text-align:center; padding:2px; margin:8px">
+      <input class="form-control me-2" type="search" placeholder="search" aria-label="search" style="text-align:center; padding:2px; margin:8px" name="search_data">
       <!-- <button class="btn btn-outline-light" type="submit">search</button> -->
-       <input type="submit" value="search" class="btn btn-outline-light" style="margin:2px">
+       <input type="submit" value="search" class="btn btn-outline-light" style="margin:2px" name="search_data_product">
     </form>
     </ul>
   </nav>
