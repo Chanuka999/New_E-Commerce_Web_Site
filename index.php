@@ -24,8 +24,8 @@ include('functions/common_function.php');
     <ul>
    
     <li><a href="#" class="cool">LOGO</a></li>
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#">Product</a></li>
+      <li><a href="index.php" class="active">Home</a></li>
+      <li><a href="display_all.php">Product</a></li>
       <li><a href="#">Register</a></li>
       <li><a href="#">Contact</a></li>
       <li><a href="#"><i class="fa-solid fa-cart-shopping"></i><sup>1</sup></a></li>
