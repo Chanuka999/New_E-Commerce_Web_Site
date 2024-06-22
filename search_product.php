@@ -32,7 +32,7 @@ include('functions/common_function.php');
       <li><a href="#">Total Price:100/=</a></li>
      
     
-    <form class="kill" style="display:flex;">
+    <form class="kill" style="display:flex"  action="" method="get">
       <input class="form-control me-2" type="search" placeholder="search" aria-label="search" style="text-align:center; padding:2px; margin:8px" name="search_data">
       <!-- <button class="btn btn-outline-light" type="submit">search</button> -->
        <input type="submit" value="search" class="btn btn-outline-light" style="margin:2px" name="search_data_product">
@@ -63,7 +63,7 @@ include('functions/common_function.php');
     <div class="row">
 
     <?php 
-    getproducts();
+    search_product();
     get_unique_categories();
     get_unique_brands();
 
