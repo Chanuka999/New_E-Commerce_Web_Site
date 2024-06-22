@@ -32,9 +32,10 @@ include('functions/common_function.php');
       <li><a href="#">Total Price:100/=</a></li>
      
     
-    <form class="kill" style="display:flex">
-      <input class="form me-2" type="search" placeholder="search" aria-label="search">
-      <button class="btn btn-outline-light" type="submit">search</button>
+    <form class="kill" style="display:flex;">
+      <input class="form-control me-2" type="search" placeholder="search" aria-label="search" style="text-align:center; padding:2px; margin:8px">
+      <!-- <button class="btn btn-outline-light" type="submit">search</button> -->
+       <input type="submit" value="search" class="btn btn-outline-light" style="margin:2px">
     </form>
     </ul>
   </nav>
