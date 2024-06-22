@@ -56,52 +56,21 @@ include('functions/common_function.php');
   <p class="text-center">Communication is at the heart of e-commerce and community</p>
 
 
-</div>
-
+</div> 
 <div class="row px-1">
   <div class="col-md-10">
+
     <div class="row">
 
-        <div class="col-md-4">
-        <div class='card' >
-      <img src='./images/biriyani1.jpg' height:200px; class='card-img-top' alt='$product_title'>
-  <div class='card-body'>
-    <h5 class='card-title'>$product_title</h5>
-    <p class='card-text'>$product_disription</p>
-   <a href='#' class='btn btn-info'>Add to cart</a>
-    <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>view more</a>
-  </div>
-</div>
-        </div>
-
-        <div class="col-md-8">
-             <div class="row">
-                <div class="col-md-12">
-                   <h4 class="text-center text-info mb-5">Related products</h4> 
-                </div>
-                <div class="col-md-6">
-                <img src='./images/biriyani2.webp' height:200px; class='card-img-top' alt='$product_title'>
-
-                </div>
-                <div class="col-md-6">
-                <img src='./images/biriyani3.jpg' height:200px; class='card-img-top' alt='$product_title'>
-
-                </div>
-             </div>
-        </div>
-
     <?php 
-    
+     view_details();
     get_unique_categories();
     get_unique_brands();
 
 ?> 
-   
-
-
 </div>
   </div>
-  <div class="col-md-2 bg-secondary p-0">
+<div class="col-md-2 bg-secondary p-0">
     <ul class="navbar-nav me-auto text-center">
       <li class="nav-item bg-info">
         <a href="#" class="nav-link text-light"><h4>Delivery Brands</h4></a>
