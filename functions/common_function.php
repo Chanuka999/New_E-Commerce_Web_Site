@@ -233,10 +233,10 @@ function getcategories(){
 function view_details(){
   global $con;
 
-  if(isset($_GET['$product_id'])){
+  if(isset($_GET['product_id'])){
   if(!isset($_GET['category'])){
   if(!isset($_GET['brand'])){
-    $product_id=$_GET['$product_id'];
+    $product_id=$_GET['product_id'];
   $select_query="Select  * from `products` where product_id=$product_id";
 $result_query=mysqli_query($con,$select_query);
 //$row=mysqli_fetch_assoc($result_query);
@@ -284,5 +284,21 @@ echo " <div class='col-md-4 mb-2'>
 }
 }
 
-
+function getIPAddress() {  
+  //whether ip is from the share internet  
+   if(!empty($_SERVER['HTTP_CLIENT_IP'])) {  
+              $ip = $_SERVER['HTTP_CLIENT_IP'];  
+      }  
+  //whether ip is from the proxy  
+  elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {  
+              $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];  
+   }  
+//whether ip is from the remote address  
+  else{  
+           $ip = $_SERVER['REMOTE_ADDR'];  
+   }  
+   return $ip;  
+}  
+// $ip = getIPAddress();  
+// echo 'User Real IP Address - '.$ip; 
 ?>
