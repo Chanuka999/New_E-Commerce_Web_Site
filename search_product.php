@@ -39,6 +39,11 @@ include('functions/common_function.php');
     </form>
     </ul>
   </nav>
+
+  <?php  
+   cart();
+  
+  ?>
   
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
   <ul class="navbar-nav me-auto">
