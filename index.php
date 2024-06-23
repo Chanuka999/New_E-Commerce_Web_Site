@@ -28,7 +28,7 @@ include('functions/common_function.php');
       <li><a href="display_all.php">Product</a></li>
       <li><a href="#">Register</a></li>
       <li><a href="#">Contact</a></li>
-      <li><a href="#"><i class="fa-solid fa-cart-shopping"></i><sup><?php cart_item(); ?></sup></a></li>
+      <li><a href="cart.php"><i class="fa-solid fa-cart-shopping"></i><sup><?php cart_item(); ?></sup></a></li>
       <li><a href="#">Total Price:<?php total_cart_price(); ?></a></li>
      
     
