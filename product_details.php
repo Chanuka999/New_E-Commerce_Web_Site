@@ -40,6 +40,11 @@ include('functions/common_function.php');
     </ul>
   </nav>
   
+  <?php  
+   cart();
+  
+  ?>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
   <ul class="navbar-nav me-auto">
     <li class="nav-item">
