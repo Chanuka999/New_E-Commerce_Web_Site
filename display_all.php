@@ -29,7 +29,7 @@ include('functions/common_function.php');
       <li><a href="#">Register</a></li>
       <li><a href="#">Contact</a></li>
       <li><a href="#"><i class="fa-solid fa-cart-shopping"></i><sup>1</sup></a></li>
-      <li><a href="#">Total Price:100/=</a></li>
+      <li><a href="#">Total Price:<?php total_cart_price(); ?></a></li>
      
     
     <form class="kill">
