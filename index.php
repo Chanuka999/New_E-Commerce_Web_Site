@@ -39,6 +39,11 @@ include('functions/common_function.php');
     </form>
     </ul>
   </nav>
+
+  <?php  
+   cart();
+  
+  ?>
   
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
   <ul class="navbar-nav me-auto">
@@ -66,8 +71,8 @@ include('functions/common_function.php');
     getproducts();
     get_unique_categories();
     get_unique_brands();
-    $ip = getIPAddress();  
-echo 'User Real IP Address - '.$ip; 
+//     $ip = getIPAddress();  
+// echo 'User Real IP Address - '.$ip; 
 
 ?> 
    
