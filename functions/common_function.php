@@ -25,7 +25,7 @@ while($row=mysqli_fetch_assoc($result_query)){
   <div class='card-body'>
     <h5 class='card-title'>$product_title</h5>
     <p class='card-text'>$product_disription</p>
-   <a href='#' class='btn btn-info'>Add to cart</a>
+   <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
     <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>view more</a>
   </div>
 </div>
@@ -61,7 +61,7 @@ echo " <div class='col-md-4 mb-2'>
 <div class='card-body'>
   <h5 class='card-title'>$product_title</h5>
   <p class='card-text'>$product_disription</p>
- <a href='#' class='btn btn-info'>Add to cart</a>
+ <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
   <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>view more</a>
 </div>
 </div>
@@ -104,7 +104,7 @@ echo " <div class='col-md-4 mb-2'>
 <div class='card-body'>
   <h5 class='card-title'>$product_title</h5>
   <p class='card-text'>$product_disription</p>
- <a href='#' class='btn btn-info'>Add to cart</a>
+ <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
   <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>view more</a>
 </div>
 </div>
@@ -146,7 +146,7 @@ echo " <div class='col-md-4 mb-2'>
 <div class='card-body'>
   <h5 class='card-title'>$product_title</h5>
   <p class='card-text'>$product_disription</p>
- <a href='#' class='btn btn-info'>Add to cart</a>
+ <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
   <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>view more</a>
 </div>
 </div>
@@ -187,7 +187,7 @@ echo " <div class='col-md-4 mb-2'>
 <div class='card-body'>
   <h5 class='card-title'>$product_title</h5>
   <p class='card-text'>$product_disription</p>
- <a href='#' class='btn btn-info'>Add to cart</a>
+<a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
    <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>view more</a>
 </div>
 </div>
@@ -257,7 +257,7 @@ echo " <div class='col-md-4 mb-2'>
 <div class='card-body'>
   <h5 class='card-title'>$product_title</h5>
   <p class='card-text'>$product_disription</p>
- <a href='#' class='btn btn-info'>Add to cart</a>
+ <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
   <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>view more</a>
 </div>
 </div>
@@ -301,4 +301,16 @@ function getIPAddress() {
 }  
 // $ip = getIPAddress();  
 // echo 'User Real IP Address - '.$ip; 
+
+
+function cart(){
+  if(isset($_GET['add_to_cart'])){
+    global $con;
+    $ip = getIPAddress(); 
+    $get_product_id=$_GET['add_to_cart'];
+    $select_query="Select * from `cart_details` where ip_address=$ip and
+    product_id=$get_product_id";
+    $result_query=mysqli_query($con,$select_query);
+  }
+}
 ?>
