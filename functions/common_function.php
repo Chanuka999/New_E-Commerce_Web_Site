@@ -258,7 +258,7 @@ echo " <div class='col-md-4 mb-2'>
   <h5 class='card-title'>$product_title</h5>
   <p class='card-text'>$product_disription</p>
  <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
-  <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>view more</a>
+  <a href='index.php' class='btn btn-secondary'>Go home</a>
 </div>
 </div>
 </div>
