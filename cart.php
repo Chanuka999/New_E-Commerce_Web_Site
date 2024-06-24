@@ -115,11 +115,12 @@ include('functions/common_function.php');
                      }
                     ?>
                     <td><?php echo $price_table  ?>/-</td>
-                    <td><input type="check box"></td>
+                    <td><input type="checkbox" name="removeitem[]" value="<?php echo $product_id ?>"></td>
                     <td>
                        <!-- <button class="bg-info p-3 py-2 border-0 mx-3">Update</button> -->
-                        <input tyoe="submit" value="update_cart" class="bg-info p-3 py-2 border-0 mx-3" name="update_cart">
-                       <button class="bg-info p-3 py-2 border-0 mx-3">Remove</button>
+                        <input type="submit" value="update cart" class="bg-info px-3 py-2 border-0 mx-3" name="update_cart">
+                       <!-- <button class="bg-info p-3 py-2 border-0 mx-3">Remove</button> -->
+                       <input type="submit" value="remove cart" class="bg-info px-3 py-2 border-0 mx-3" name="remove_cart">
                     </td>
                 </tr>
                 <?php    }
@@ -137,6 +138,28 @@ include('functions/common_function.php');
     </div>
 </div>
 </form>
+
+<?php  
+ function remove_cart_item(){
+  global $con;
+  if(isset($_POST['remove_cart'])){
+    foreach($_POST['removeitem'] as $remove_id){
+      echo $remove_id;
+      $delect_query="Delete from `cart_details` where product_id=$remove_id";
+      $run_delete=mysqli_query($con,$delect_query);
+      if($run_delete){
+        echo "<script>window.open('cart.php','_self')</script>";
+      }
+    }
+  }
+ }
+
+echo $remove_item=remove_cart_item();
+
+?>
+
+
+
 <?php  include("./includes/footer.php") ?>
   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
