@@ -75,7 +75,7 @@ include('functions/common_function.php');
             <tbody>
                 <tr>
                     <td>Apple</td>
-                    <td><img src="./images/apple.webp" alt=""></td>
+                    <td><img src="./images/apple.webp" height=150px     alt=""></td>
                     <td><input type="" text="" id=""></td>
                     <td>9000</td>
                     <td><input type="check box"></td>
@@ -87,8 +87,11 @@ include('functions/common_function.php');
             </tbody>
         </table>
 
-        <div>
-            <h4 class="px-3">Subtotal</h4>
+        <div class="d-flex mb-5">
+            <h4 class="px-3">Subtotal:<strong class="text-info">5000/-</strong></h4>
+            <a href="index.php"><button class="bg-info p-3 py-2 border-0 mx-3">Continue Shopping</button></a>
+            
+            <a href="#"><button class="bg-secondary p-3 py-2 border-0 text-light">Check Out</button></a>
         </div>
     </div>
 </div>
