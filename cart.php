@@ -65,6 +65,7 @@ include('functions/common_function.php');
 
 <div class="container">
     <div class="row">
+      <form action="" method="post">
         <table class="table table-bordered text-center">
             <thead>
                 <tr>
@@ -79,7 +80,7 @@ include('functions/common_function.php');
             <tbody>
 
             <?php   
-             global $con;
+             
              $get_ip_add = getIPAddress(); 
              $total_price=0;
              $cart_query="Select * from `cart_details` where ip_address='$get_ip_add'";
@@ -90,7 +91,7 @@ include('functions/common_function.php');
                $result_products=mysqli_query($con,$select_products);
                while($row_product_price=mysqli_fetch_array($result_products)){
                  $product_price=array($row_product_price['product_price']);
-                 $product_table=$row_product_price['product_price'];
+                 $price_table=$row_product_price['product_price'];
                  $product_title=$row_product_price['product_title'];
                  $product_image1=$row_product_price['product_image1'];
                  $product_values=array_sum($product_price);
@@ -100,11 +101,25 @@ include('functions/common_function.php');
                 <tr>
                     <td><?php echo $product_title  ?></td>
                     <td><img src="./images/<?php echo $product_image1  ?>" height=80px width="80px"  class="cart_img"   alt=""></td>
-                    <td><input type="text" text="" id="" class="form-input w-50"></td>
-                    <td><?php echo $product_table  ?>/-</td>
+                    <td><input type="text" name="qty" id="" class="form-input w-50"></td>
+
+                    <?php  
+                     $get_ip_add = getIPAddress();
+                     if(isset($_POST['update_cart'])){
+                      $quantities=$_POST['qty'];
+                      $update_cart="update `cart_details` set quantity=$quantities where ip_address='$get_ip_add'";
+                      $result_products_quantity=mysqli_query($con,$update_cart);
+                      $total_price=$total_price* $quantities;
+
+
+                     }
+                    ?>
+                    <td><?php echo $price_table  ?>/-</td>
                     <td><input type="check box"></td>
                     <td>
-                       <button class="bg-info p-3 py-2 border-0 mx-3">Update</button><button class="bg-info p-3 py-2 border-0 mx-3">Remove</button>
+                       <!-- <button class="bg-info p-3 py-2 border-0 mx-3">Update</button> -->
+                        <input tyoe="submit" value="update_cart" class="bg-info p-3 py-2 border-0 mx-3" name="update_cart">
+                       <button class="bg-info p-3 py-2 border-0 mx-3">Remove</button>
                     </td>
                 </tr>
                 <?php    }
@@ -112,7 +127,7 @@ include('functions/common_function.php');
             ?>
             </tbody>
         </table>
-
+      
         <div class="d-flex mb-5">
             <h4 class="px-3">Subtotal:<strong class="text-info"><?php echo $total_price  ?>/-</strong></h4>
             <a href="index.php"><button class="bg-info p-3 py-2 border-0 mx-3">Continue Shopping</button></a>
@@ -121,7 +136,7 @@ include('functions/common_function.php');
         </div>
     </div>
 </div>
-
+</form>
 <?php  include("./includes/footer.php") ?>
   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
