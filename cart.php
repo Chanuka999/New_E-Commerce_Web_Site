@@ -69,19 +69,37 @@ include('functions/common_function.php');
                 <th>Quantity</th>
                 <th>Total price</th>
                 <th>Remove</th>
-                <th>Operations</th>
+                <th collspan="2">Operations</th>
                 </tr>
             </thead>
             <tbody>
+
+            <?php   
+             global $con;
+             $get_ip_add = getIPAddress(); 
+             $total_price=0;
+             $cart_query="Select * from `cart_details` where ip_address='$get_ip_add'";
+             $result=mysqli_query($con,$cart_query);
+             while($row=mysqli_fetch_array($result)){
+               $product_id=$row['product_id'];
+               $select_products="Select * from `products` where product_id='$product_id'";
+               $result_products=mysqli_query($con,$select_products);
+               while($row_product_price=mysqli_fetch_array($result_products)){
+                 $product_price=array($row_product_price['product_price']);
+                 $product_values=array_sum($product_price);
+                 $total_price+=$product_values;
+               }
+             }
+            
+            ?>
                 <tr>
                     <td>Apple</td>
-                    <td><img src="./images/apple.webp" height=150px     alt=""></td>
+                    <td><img src="./images/apple.webp" height=80px width="80px"  class="cart_img"   alt=""></td>
                     <td><input type="" text="" id=""></td>
                     <td>9000</td>
                     <td><input type="check box"></td>
                     <td>
-                        <p>Update</p>
-                        <p>Remove</p>
+                       <button class="bg-info p-3 py-2 border-0 mx-3">Update</button><button class="bg-info p-3 py-2 border-0 mx-3">Remove</button>
                     </td>
                 </tr>
             </tbody>
