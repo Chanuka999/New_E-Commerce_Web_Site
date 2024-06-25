@@ -141,15 +141,16 @@ include('functions/common_function.php');
         <div class="d-flex mb-5">
           <?php  
           $get_ip_add = getIPAddress(); 
-          $total_price=0;
+         
           $cart_query="Select * from `cart_details` where ip_address='$get_ip_add'";
           $result=mysqli_query($con,$cart_query);
           $result_count=mysqli_num_rows($result);
           if($result_count>0){
             echo "<h4 class='px-3'>Subtotal:<strong class='text-info'>$total_price /-</strong></h4>
-            <a href='index.php'><button class='bg-info p-3 py-2 border-0 mx-3'>Continue Shopping</button></a>
-            
+           <input type='submit' value='Continue Shopping' class='bg-info px-3 py-2 border-0 mx-3' name='continue_shopping'>
             <a href=''><button class='bg-secondary p-3 py-2 border-0 text-light'>Check Out</button></a>";
+          }else{
+            echo " <input type='submit' value='Continue Shopping' class='bg-info px-3 py-2 border-0 mx-3' name='continue_shopping'>";
           }
           
           ?>
