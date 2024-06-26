@@ -16,7 +16,11 @@
         <div class="row">
             <div class="lg-12 col-xl-6">
                 <form cavtion="" method="post" anctype="multipart/form_data">
-                    <div class="form-outline"></div>
+                    <div class="form-outline">
+                     <label for="user_username" class="form_label"></label>  
+                     <input type="text" id="user_username" class="form_label">
+                     <input type="text" id="user_username" class="form-control" placeholder="Enter your username" autocomplete="off">
+                    </div>
                 </form>
 
             
