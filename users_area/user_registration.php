@@ -16,10 +16,12 @@
         <div class="row">
             <div class="lg-12 col-xl-6">
                 <form cavtion="" method="post" anctype="multipart/form_data">
-                    <div class="form-outline">
-                     <label for="user_username" class="form_label"></label>  
-                     <input type="text" id="user_username" class="form_label">
-                     <input type="text" id="user_username" class="form-control" placeholder="Enter your username" autocomplete="off">
+                    <div class="form-outline mb-4">
+                     <label for="user_username" class="form_label">Username</label>  
+                     <input type="text" id="user_username" class="form-control" placeholder="Enter your username" autocomplete="off" required="required" name="user_username">
+                    </div>
+                    <label for="user_email" class="form_label">Email</label>  
+                     <input type="text" id="user_email" class="form-control" placeholder="Enter your email" autocomplete="off" required="required" name="user_uemail">
                     </div>
                 </form>
 
