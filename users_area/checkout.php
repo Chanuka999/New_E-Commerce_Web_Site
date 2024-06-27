@@ -21,22 +21,22 @@ include('../includes/connect.php');
  
 <nav style="background-color:blueviolet">
 
-    <ul>
+<ul>
    
-    <li><a href="#" class="cool">LOGO</a></li>
-      <li><a href="index.php" class="active">Home</a></li>
-      <li><a href="display_all.php">Product</a></li>
-      <li><a href="#">Register</a></li>
-      <li><a href="#">Contact</a></li>
+   <li><a href="#" class="cool">LOGO</a></li>
+   <li><a href="index.php" class="active">Home</a></li>
+     <li><a href="display_all.php">Product</a></li>
+     <li><a href="#">Register</a></li>
+     <li><a href="#">Contact</a></li> 
+   
     
-     
-    
-    <form class="kill" style="display:flex;" action="search_product.php" method="get">
-      <input class="form-control me-2" type="search" placeholder="search" aria-label="search" style="text-align:center; padding:2px; margin:8px" name="search_data">
-      <!-- <button class="btn btn-outline-light" type="submit">search</button> -->
-       <input type="submit" value="search" class="btn btn-outline-light" style="margin:2px" name="search_data_product">
-    </form>
-    </ul>
+   
+   <form class="kill" style="display:flex;" action="search_product.php" method="get">
+     <input class="form-control me-2" type="search" placeholder="search" aria-label="search" style="text-align:center; padding:2px; margin:8px" name="search_data">
+   
+      <input type="submit" value="search" class="btn btn-outline-light" style="margin:2px" name="search_data_product">
+   </form>
+   </ul>
   </nav>
 
 
@@ -50,6 +50,9 @@ include('../includes/connect.php');
     </li>
   </ul>
 </nav>
+
+
+ 
 
 <div class="bg-light">
   <h3 class="text-center">Hidden store</h3>
