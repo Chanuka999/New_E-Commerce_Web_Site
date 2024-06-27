@@ -19,23 +19,7 @@
 
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-  <ul class="navbar-nav me-auto">
-    <li class="nav-item">
-      <a class="nav-link" href="#">Welcome guest</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Login</a>
-    </li>
-  </ul>
-</nav>
 
-<div class="bg-light">
-  <h3 class="text-center">Hidden store</h3>
-  <p class="text-center">Communication is at the heart of e-commerce and community</p>
-
-
-</div>
 
     <div class="container-fluid my-3">
         <h2 class="text-center">User Logn</h2>
