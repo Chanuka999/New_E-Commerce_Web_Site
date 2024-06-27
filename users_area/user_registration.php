@@ -1,4 +1,5 @@
-<?php include('../includes/connect.php');
+<?php
+ include('../includes/connect.php');
  include('../functions/common_function.php');
    ?>
 
@@ -32,17 +33,17 @@
 
                     <div class="form-outline mb-4">
                     <label for="user_image" class="form_label">User Image</label>  
-                     <input type="file" id="user_image" class="form-control"  required="required" name="user_image ">
+                     <input type="file" id="user_image" class="form-control"  required="required" name="user_image">
                     </div>
 
                     <div class="form-outline mb-4">
                     <label for="user_password" class="form_label">Password</label>  
-                     <input type="password" id="user_password" class="form-control"  required="required" name="user_paasword">
+                     <input type="password" id="user_password" class="form-control"  required="required" name="user_password">
                     </div>
 
                     <div class="form-outline mb-4">
                     <label for="conf_user_password" class="form_label">Confirm Password</label>  
-                     <input type="password" id="conf_user_password" class="form-control" placehoider="confirm password"  required="required" name="user_paasword">
+                     <input type="password" id="conf_user_password" class="form-control" placeholder="confirm password"  required="required" name="conf_user_password">
                     </div>
 
                    
@@ -76,15 +77,15 @@ if(isset($_POST['user_register'])){
     $user_username=$_POST['user_username'];
     $user_email=$_POST['user_email'];
     $user_password=$_POST['user_password'];
-    $conf_user_username=$_POST['conf_user_username'];
+    $conf_user_password=$_POST['conf_user_password'];
     $user_address=$_POST['user_address'];
     $user_contact=$_POST['user_contact'];
     $user_image=$_FILES['user_image']['name'];
     $user_image_tmp=$_FILES['user_image']['tmp_name'];
-    $user_id=getIPAddress();
+    $user_ip=getIPAddress();
     
     move_uploaded_file($user_image_tmp,"./user_images/$user_image");
-    $insert_query="insert into `user_table` (username,user_email,user_password,user_image,user_ip,user_address_user_mobile) values('$user_username','$user_email','$user_password','$user_image','$user_ip','$user_address','$user_contact')";
+    $insert_query="insert into `user_table` (username,user_email,user_password,user_image,user_ip,user_address_user_mobile) values ('$user_username','$user_email','$user_password','$user_image','$user_ip','$user_address','$user_contact')";
     $sql_execute=mysqli_query($con,$insert_query);
     if($sql_execute){
         echo "<script>alert('Data inserted successfully')</script>";
