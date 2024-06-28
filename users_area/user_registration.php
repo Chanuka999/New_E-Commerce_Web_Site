@@ -100,9 +100,6 @@ if(isset($_POST['user_register'])){
 
 ?--> 
 <?php
-// Ensure connect.php and common_function.php are properly included
-//include('../includes/connect.php');
-//include('../functions/common_function.php');
 
 if(isset($_POST['user_register'])){
     $user_username = $_POST['user_username'];
@@ -115,7 +112,19 @@ if(isset($_POST['user_register'])){
     $user_image_tmp = $_FILES['user_image']['tmp_name'];
     $user_ip = getIPAddress();
     
-    // Move uploaded file to designated folder
+
+
+    $select_query="Select * from `user_table` where username='$username' or user_email='$user_email'";
+    $result=mysqli_query($con,$select_query);
+    $rows_count=mysqli_num_rows($result);
+    if($rows_count>0){
+        echo "<script>alert('username and email already exist')</script>";
+    }else if($user_password!=$conf_user_password){
+        echo "<script>alert('password do not match')</script>";
+    }
+    
+    else{
+          // Move uploaded file to designated folder
     move_uploaded_file($user_image_tmp, "./user_images/$user_image");
 
     // SQL query to insert user data into database
@@ -124,13 +133,9 @@ if(isset($_POST['user_register'])){
 
     // Execute SQL query
     $sql_execute = mysqli_query($con, $insert_query);
-
-    // Check if query executed successfully
-    if($sql_execute){
-        echo "<script>alert('Data inserted successfully')</script>";
-    } else {
-        // Display MySQL error message if insertion fails
-        die(mysqli_error($con));
     }
+  
+
+   
 }
 ?>
