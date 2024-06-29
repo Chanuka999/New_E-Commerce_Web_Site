@@ -48,11 +48,11 @@ session_start();
     <?php   
     if(!isset($_SESSION['username'])){
       echo " <li class='nav-item'>
-      <a class='nav-link' href'./user_login.php'>Login</a>
+      <a class='nav-link' href='./users_area/user_login.php'>Login</a>
     </li>";
     }else{
       echo " <li class='nav-item'>
-      <a class='nav-link' href='logout.php'>Logout</a>
+      <a class='nav-link' href='./users_area/logout.php'>Logout</a>
     </li>";
     }
     
