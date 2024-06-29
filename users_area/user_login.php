@@ -1,4 +1,6 @@
-
+<?php
+include('../includes/connect.php');
+?>
 
 
 
@@ -14,6 +16,12 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <style>
+
+    body{
+        overflow-x: hidden;
+    }
+    </style>
 </head>
 <body>
 
@@ -25,7 +33,7 @@
         <h2 class="text-center">User Logn</h2>
         <div class="row d-flex align-item-center justify-content-center mt-5">
             <div class="lg-12 col-xl-6">
-                <form cavtion="" method="post" enctype="multipart/form_data">
+                <form action="" method="post">
                     <div class="form-outline mb-4">
                      <label for="user_username" class="form_label">Username</label>  
                      <input type="text" id="user_username" class="form-control" placeholder="Enter your username" autocomplete="off" required="required" name="user_username">
@@ -34,7 +42,7 @@
                     
                     <div class="form-outline mb-4">
                     <label for="user_password" class="form_label">Password</label>  
-                     <input type="password" id="user_password" class="form-control"  required="required" name="user_paasword">
+                     <input type="password" id="user_password" class="form-control"  required="required" name="user_password">
                     </div>
 
 
@@ -56,3 +64,27 @@
 
 </body>
 </html>
+
+<?php  
+if(isset($_POST['user_login'])){
+    $user_username=$_POST['user_username'];
+    $user_password=$_POST['user_password'];
+
+    $select_query="Select * from `user_table` where username='$user_username'";
+    $result=mysqli_query($con,$select_query);
+    $rows_count=mysqli_num_rows($result);
+    $row_data=mysqli_fetch_assoc($result); 
+    if($rows_count){
+      if(password_verify($user_password,$row_data['user_password'])){
+        echo "<script>alert('Login successfull')</script>";
+      }else{
+        echo "<script>alert('Invalid Credantials')</script>";
+      }
+    }else{
+        echo "<script>alert('Invalid Credantials')</script>";
+    }
+    
+}
+
+
+?>
