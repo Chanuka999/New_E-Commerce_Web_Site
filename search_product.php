@@ -2,6 +2,7 @@
 
 include('includes/connect.php');
 include('functions/common_function.php');
+session_start();
 
 ?>
 <!DOCTYPE html>
@@ -26,7 +27,7 @@ include('functions/common_function.php');
     <li><a href="#" class="cool">LOGO</a></li>
       <li><a href="index.php" class="active">Home</a></li>
       <li><a href="display_all.php">Product</a></li>
-      <li><a href="#">Register</a></li>
+      <li><a href="./users_area/user_registration.php">Register</a></li>
       <li><a href="#">Contact</a></li>
       <li><a href="#"><i class="fa-solid fa-cart-shopping"></i><sup><?php cart_item(); ?></sup></a></li>
       <li><a href="#">Total Price:<?php total_cart_price(); ?></a></li>
@@ -50,9 +51,19 @@ include('functions/common_function.php');
     <li class="nav-item">
       <a class="nav-link" href="#">Welcome guest</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="./users_area/user_login.php">Login</a>
-    </li>
+    <?php   
+    if(!isset($_SESSION['username'])){
+      echo " <li class='nav-item'>
+      <a class='nav-link' href'./user_login.php'>Login</a>
+    </li>";
+    }else{
+      echo " <li class='nav-item'>
+      <a class='nav-link' href='logout.php'>Logout</a>
+    </li>";
+    }
+    
+    
+    ?>
   </ul>
 </nav>
 
