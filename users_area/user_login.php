@@ -77,10 +77,15 @@ if(isset($_POST['user_login'])){
     $user_id=getIpAddress();
 
 
-    $select_query="Select * from `cart_details` where ip_address='$user_ip'";
+    $select_query_cart="Select * from `cart_details` where ip_address='$user_ip'";
+    $select_cart=mysqli_query($con,$select_query_cart);
+    $rows_count_cart=mysqli_num_rows($row_count_cart);
     if($rows_count){
       if(password_verify($user_password,$row_data['user_password'])){
+       // echo "<script>alert('Login successfull')</script>";
+       if($row_count==1 and $row_count_cart==0){
         echo "<script>alert('Login successfull')</script>";
+       }
       }else{
         echo "<script>alert('Invalid Credantials')</script>";
       }
