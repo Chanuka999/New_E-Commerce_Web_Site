@@ -15,7 +15,12 @@ include('functions/common_function.php');
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
 
+body{
+    overflow-x: hidden;
+}
+</style>
 </head>
 <body>
  
@@ -26,7 +31,7 @@ include('functions/common_function.php');
     <li><a href="#" class="cool">LOGO</a></li>
       <li><a href="index.php" class="active">Home</a></li>
       <li><a href="display_all.php">Product</a></li>
-      <li><a href="#">Register</a></li>
+      <li><a href="./users_area/user_registration.php">Register</a></li>
       <li><a href="#">Contact</a></li>
       <li><a href="cart.php"><i class="fa-solid fa-cart-shopping"></i><sup><?php cart_item(); ?></sup></a></li>
       <li><a href="#">Total Price:<?php total_cart_price(); ?></a></li>
