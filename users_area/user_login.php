@@ -86,6 +86,9 @@ if(isset($_POST['user_login'])){
        if($row_count==1 and $row_count_cart==0){
         echo "<script>alert('Login successfull')</script>";
         echo "<script>window.open('profile.php','_self')</script>";
+       }else{
+        echo "<script>alert('Login successfull')</script>";
+        echo "<script>window.open('payment.php','_self')</script>";
        }
       }else{
         echo "<script>alert('Invalid Credantials')</script>";
