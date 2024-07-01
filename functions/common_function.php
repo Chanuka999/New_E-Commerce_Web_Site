@@ -369,4 +369,9 @@ echo $count_cart_items;
     }
     echo $total_price;  
   }
+
+  function get_user_order_details(){
+    global $con;
+    $username=$_SESSION['username'];
+  }
 ?>
