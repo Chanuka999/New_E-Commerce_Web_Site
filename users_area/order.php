@@ -14,6 +14,7 @@ $result_cart_price=mysqli_query($con,$cart_query_price);
 $count_product=mysqli_num_rows($result_cart_price);
 while($row_price=mysqli_fetch_array($result_cart_price)){
     $product_id=$row_price['product_id'];
+    
 }
 
 ?>
