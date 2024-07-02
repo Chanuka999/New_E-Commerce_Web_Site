@@ -23,6 +23,7 @@ include('functions/common_function.php');
 
 body{
     overflow-x: hidden;
+    background-color: #111;
 }
 </style>
 </head>
