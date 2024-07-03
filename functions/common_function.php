@@ -373,5 +373,66 @@ echo $count_cart_items;
   function get_user_order_details(){
     global $con;
     $username=$_SESSION['username'];
+    $get_details="Select * from `user_table` where username='$username'";
+    $result_query=mysqli_query($con,$get_details);
+      while($row_query=mysqli_fetch_array($result_query)){
+      $user_id=$row_query['user_id'];
+      if(!isset($_GEt['edit_account'])){
+        if(!isset($_GEt['my_orders'])){
+          if(!isset($_GEt['delete_account'])){
+            $get_orders="Select * from `user_orders` where user_id=$user_id  and order_status='pending'";
+            $result_orders_query=mysqli_query($con,$get_orders);
+            $row_count=mysqli_num_rows($result_orders_query);
+            if($row_count>0){
+               echo "<h3 class='text-center'>You have <span class='text-danger'>$row_count</span>pending orders</h3>;
+               <a href='profile.php?my_orders'>order Details</a>";
+            }
+          }
+        }
+      }
+    }
   }
-?>
+
+  
+//   function get_user_order_details(){
+//     global $con; // Assuming $con is your database connection object
+    
+//     // Assuming $_SESSION['username'] contains the username of the logged-in user
+//     $username = $_SESSION['username'];
+    
+//     // Query to fetch user details based on username
+//     $get_details = "SELECT * FROM `user_table` WHERE username='$username'";
+//     $result_query = mysqli_query($con, $get_details);
+  
+//     if (!$result_query) {
+//       die("Error in SQL query: " . mysqli_error($con));
+//     }
+  
+//     // Assuming only one row will be fetched for the given username
+//     if ($row_query = mysqli_fetch_assoc($result_query)) {
+//       $user_id = $row_query['user_id'];
+  
+//       // Check if $_GET variables are not set to proceed with displaying orders
+//       if (!isset($_GET['edit_account']) && !isset($_GET['my_orders']) && !isset($_GET['delete_account'])) {
+        
+//         // Query to fetch pending orders for the user
+//         $get_orders = "SELECT * FROM `user_orders` WHERE user_id=$user_id AND order_status='pending'";
+//         $result_orders_query = mysqli_query($con, $get_orders);
+  
+//         if (!$result_orders_query) {
+//           die("Error in SQL query: " . mysqli_error($con));
+//         }
+  
+//         $row_count = mysqli_num_rows($result_orders_query);
+  
+//         if ($row_count > 0) {
+//           echo "<h3 class='text-center'>You have <span class='text-danger'>$row_count</span> pending orders</h3>";
+//           echo "<a href='profile.php?my_orders'>Order Details</a>";
+//         }
+//       }
+//     }
+//   }
+  
+  
+
+// ?>
