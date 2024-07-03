@@ -23,6 +23,7 @@ include('../functions/common_function.php');
 
 body{
     overflow-x: hidden;
+   /* background-color: #111;*/
 }
 
 .profile_img{
@@ -31,6 +32,41 @@ body{
     display: block;
  object-fit: contain;
 }
+.edit_image{
+  width:100px;
+  margin: auto;
+  display: block;
+  object-fit: contain;
+}
+.footer{
+  padding: 3px;
+  background-color: rgba(33, 136, 177, 0.568);
+  text-align: center;
+ }
+  
+ ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: blue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+  
 </style>
 </head>
 <body>
@@ -105,7 +141,7 @@ $user_image="Select * from `user_table` where username='$username'";
 $user_image=mysqli_query($con,$user_image);
 $row_image=mysqli_fetch_array($user_image);
 $user_image=$row_image['user_image'];
-echo " <li class='nav link'>
+echo " <li class='nav item'>
             <img src='./user_images/$user_image'  class='profile_img my-4'alt=''>
         </li>";
 
@@ -119,24 +155,33 @@ echo " <li class='nav link'>
 
 
        
-        <li class="nav link">
+        <li class="nav item">
             <a class="nav-link text-light" href="profile.php">Pending orders</a>
         </li>
-        <li class="nav link">
+        <li class="nav item">
             <a class="nav-link text-light" href="profile.php?edit_account">Edit Accout</a>
         </li>
-        <li class="nav link">
+        <li class="nav item">
             <a class="nav-link text-light" href="profile.php?my_orders">My order</a>
         </li>
-        <li class="nav link">
+        <li class="nav item">
             <a class="nav-link text-light" href="profile.php?delete_account">Delete account</a>
         </li>
-        <li class="nav link">
+        <li class="nav item">
             <a class="nav-link text-light" href="logout.php">Logout</a>
         </li>
     </ul>
     </div>
-    <div class="col-md-10"></div>
+    <div class="col-md-10 text-center">
+      <?php  get_user_order_details();
+      if(isset($_GET['edit_account'])){
+       include('edit_account.php');
+      }
+      if(isset($_GET['my_orders'])){
+        include('user_orders.php');
+       }
+        ?> 
+    </div>
 </div>
 
 <?php  include("../includes/footer.php") ?>
