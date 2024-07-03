@@ -36,7 +36,16 @@ body{
     <li><a href="#" class="cool">LOGO</a></li>
       <li><a href="index.php" class="active">Home</a></li>
       <li><a href="display_all.php">Product</a></li>
-      <li><a href="./users_area/user_registration.php">Register</a></li>
+      <?php
+          if(isset($_SESSION['username'])){
+        echo   "<li><a href='./users_area/profile.php'>My Account</a></li>";
+          }else{
+            
+        echo   "<li><a href='./users_area/user_registration.php'>Registeer</a></li>";
+          }
+
+       ?>
+     
       <li><a href="#">Contact</a></li>
       <li><a href="cart.php"><i class="fa-solid fa-cart-shopping"></i><sup><?php cart_item(); ?></sup></a></li>
       <li><a href="#">Total Price:<?php total_cart_price(); ?></a></li>
