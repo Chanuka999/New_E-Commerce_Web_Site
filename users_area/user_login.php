@@ -23,6 +23,30 @@ include('../functions/common_function.php');
 
     body{
         overflow-x: hidden;
+        background-image:url('../images/logpic2.png');
+        background-repeat: no-repeat;
+        background-size:cover;
+       
+        
+    }
+    .container{
+        box-shadow: 
+    0px 2px 10px rgba(0,0,0,0.2), 
+    0px 10px 20px rgba(0,0,0,0.3), 
+    0px 30px 60px 1px rgba(0,0,0,0.5);
+  border-radius: 8px;
+  padding: 50px;
+  /*-fluid my-3*/
+  margin-top: 3%;
+  position:relative;
+  width:800px;
+  height: 440px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  
+
+  
+  
     }
     </style>
 </head>
@@ -32,7 +56,7 @@ include('../functions/common_function.php');
 
 
 
-    <div class="container-fluid my-3">
+    <div class="container">
         <h2 class="text-center">User Logn</h2>
         <div class="row d-flex align-item-center justify-content-center mt-5">
             <div class="lg-12 col-xl-6">
