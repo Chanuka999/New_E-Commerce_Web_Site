@@ -1,5 +1,5 @@
 # New_E-Commerce_Web_Site
-# Blogs Store Web Application 📝
+# E COMMERCE WEB SITE 📝
 ![Blogo]()
 ## Description
 I have developed an e-commerce website using HTML, CSS, PHP, and MySQL. The website features user authentication, product browsing, category management, shopping cart functionality, and secure payment processing. It also includes a responsive design to ensure compatibility across various devices.
