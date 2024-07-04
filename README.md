@@ -4,7 +4,7 @@
 ## Description
 I have developed an e-commerce website using HTML, CSS, PHP, and MySQL. The website features user authentication, product browsing, category management, shopping cart functionality, and secure payment processing. It also includes a responsive design to ensure compatibility across various devices.
 ## Features
-- **User Registration and Authentication: Allow users to create accounts, log in, and manage their profiles securely.
+- User Registration and Authentication: Allow users to create accounts, log in, and manage their profiles securely.
 
 - **Product Catalog: Display products with details such as descriptions, prices, and images. Organize products into categories and subcategories for easier navigation.
 
