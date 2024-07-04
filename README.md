@@ -2,7 +2,7 @@
 # Blogs Store Web Application 📝
 ![Blogo]()
 ## Description
-This is a simple web application for managing blogs, developed using the MERN stack (MongoDB, Express, React, Node.js). It includes features such as user authentication, blog creation, category management, and file uploads.
+I have developed an e-commerce website using HTML, CSS, PHP, and MySQL. The website features user authentication, product browsing, category management, shopping cart functionality, and secure payment processing. It also includes a responsive design to ensure compatibility across various devices.
 ## Features
 - **User Registration:** Allows users to create an account.
 - **User Login:** Allows users to log in to their account.
