@@ -21,3 +21,13 @@ I have developed an e-commerce website using HTML, CSS, PHP, and MySQL. The webs
 - Responsive Design: Optimize the website for mobile devices as well as desktops, providing a seamless shopping experience across all platforms.
   
 - Admin Dashboard: Provide administrators with tools to manage inventory, view orders, analyze sales data, and customize the website.
+
+- ## Tech Stack
+### Frontend:
+- HTML
+- CSS
+- 
+### Backend:
+- PHP
+- MYSQL
+
