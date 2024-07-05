@@ -1,4 +1,3 @@
-# New_E-Commerce_Web_Site
 # E COMMERCE WEB SITE 📝
 
 ## Description
