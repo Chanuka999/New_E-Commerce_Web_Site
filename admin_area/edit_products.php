@@ -24,6 +24,9 @@ if(!isset($_GET['edit_products'])){
   $product_image2=$row['$product_image2'];
   $product_image3=$row['product_image3'];
   $product_price=$row['product_price'];
+
+  $select_category="Select * from `categories` where category_id=$category_id";
+  $result_category=mysqli_query($rcon,$get_data);
 }
 
 ?>
