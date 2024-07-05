@@ -26,7 +26,16 @@ if(!isset($_GET['edit_products'])){
   $product_price=$row['product_price'];
 
   $select_category="Select * from `categories` where category_id=$category_id";
-  $result_category=mysqli_query($rcon,$get_data);
+  $result_category=mysqli_query($rcon,$select_category);
+  $row_category=mysqli_fetch_assoc($result_category);
+  $category_title=$row_category['$category_title'];
+  //echo $category_title;
+
+  $select_brand="Select * from `brands` where brand_id=$brand_id";
+  $result_brand=mysqli_query($rcon,$select_brand);
+  $row_brand=mysqli_fetch_assoc($result_brand);
+  $brand_title=$row_brand['$brand_title'];
+  //echo $category_title;
 }
 
 ?>
@@ -49,7 +58,15 @@ if(!isset($_GET['edit_products'])){
         <div class="form-outline w-50 m-auto mb-4">
         <label for="product_category" class="foem_label">Product Categories</label>
             <select name="product_category" class="form-select">
-                <option value="">1</option>
+                <option value="<?php echo $category_title ?>"><?php echo $category_title ?></option>
+                <!--?php
+                
+  $select_category_all="Select * from `categories`;
+  $result_category=mysqli_query($rcon,$select_category_all);
+  $row_category=mysqli_fetch_assoc($result_category);
+  $category_title=$row_category['category_title'];
+
+  ?-->
                 <option value="">2</option>
                 <option value="">3</option>
                 <option value="">4</option>
@@ -59,7 +76,7 @@ if(!isset($_GET['edit_products'])){
         <div class="form-outline w-50 m-auto mb-4">
         <label for="product_brands" class="foem_label">Product Brands</label>
             <select name="product_brands" class="form-select">
-                <option value="">1</option>
+                <option value="<?php echo $brand_title ?>"><?php echo $brand_title ?></option>
                 <option value="">2</option>
                 <option value="">3</option>
                 <option value="">4</option>
