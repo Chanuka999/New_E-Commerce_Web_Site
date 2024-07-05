@@ -26,7 +26,7 @@ I have developed an e-commerce website using HTML, CSS, PHP, and MySQL. The webs
 ### Frontend:
 - HTML
 - CSS
-- 
+
 ### Backend:
 - PHP
 - MYSQL
