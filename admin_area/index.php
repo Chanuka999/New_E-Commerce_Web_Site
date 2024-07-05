@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+ 
     <style>
       .admin-image{
           width: 100px;
@@ -18,6 +18,26 @@
         bottom: 0;
         background-color: rgba(33, 136, 177, 0.568);
        }
+      body{
+      overflow: hidden;
+      }
+      .product_img{
+        width:100px;
+        object-fit: contain;
+      }
+      * {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+     box-sizing: border-box;
+    
+    
+  }
+  .footer{
+  padding: 3px;
+  background-color: rgba(33, 136, 177, 0.568);
+  text-align: center;
+ }
     </style>
 </head>
 <body>
@@ -47,7 +67,7 @@
          <!--   -->
          <div class="button text-center">
           <button class="my-3"><a href="insert_product.php" class="nav-link text-light bg-info my-1 ">Insert Products</a></button>
-          <button><a href="" class="nav-link text-light bg-info my-1">View Products</a></button>
+          <button><a href="index.php?view_products" class="nav-link text-light bg-info my-1">View Products</a></button>
           <button><a href="index.php?insert_category" class="nav-link text-light bg-info my-1">Insert Categories</a></button>
           <button><a href="" class="nav-link text-light bg-info my-1">View Categories</a></button>
           <button><a href="index.php?insert_brand" class="nav-link text-light bg-info my-1">Insert Brands</a></button>
@@ -69,10 +89,17 @@
     if(isset($_GET['insert_brand'])){
       include('insert_brands.php');
     }
+    if(isset($_GET['view_products'])){
+      include('view_products.php');
+    }
+    if(isset($_GET['edit_products'])){
+      include('edit_products.php');
+    }
+
     ?>
    </div>
 
-  <div class="footerr">
+  <div class="footer">
     <p>All right reserved o- designed by chanuka-2024</p>
   </div> 
   
