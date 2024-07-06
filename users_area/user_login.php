@@ -75,7 +75,7 @@ include('../functions/common_function.php');
 
                     <div class="mt-4 pt-2">
                         <input type="submit" value="Login" class="bg-info py-2 px-3 border-0" name="user_login">
-                        <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account ?<a href="user_registration.php" class="text-danger"> Login</a></p>
+                        <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account ?<a href="user_registration.php" class="text-danger"> Register</a></p>
                     </div>
                 </form>
 
@@ -107,7 +107,7 @@ if(isset($_POST['user_login'])){
     $select_query_cart="Select * from `cart_details` where ip_address='$user_ip'";
     $select_cart=mysqli_query($con,$select_query_cart);
     $rows_count_cart=mysqli_num_rows($select_cart);
-    if($row_count>0){
+    if($rows_count>0){
         $_SESSION['username']= $user_username;
       if(password_verify($user_password,$row_data['user_password'])){
        // echo "<script>alert('Login successfull')</script>";
