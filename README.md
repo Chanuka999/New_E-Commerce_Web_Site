@@ -1,6 +1,5 @@
-# New_E-Commerce_Web_Site
 # E COMMERCE WEB SITE 📝
-![Blogo]()
+
 ## Description
 I have developed an e-commerce website using HTML, CSS, PHP, and MySQL. The website features user authentication, product browsing, category management, shopping cart functionality, and secure payment processing. It also includes a responsive design to ensure compatibility across various devices.
 ## Features
@@ -21,3 +20,16 @@ I have developed an e-commerce website using HTML, CSS, PHP, and MySQL. The webs
 - Responsive Design: Optimize the website for mobile devices as well as desktops, providing a seamless shopping experience across all platforms.
   
 - Admin Dashboard: Provide administrators with tools to manage inventory, view orders, analyze sales data, and customize the website.
+
+- ## Tech Stack
+### Frontend:
+- HTML
+- CSS
+
+### Backend:
+- PHP
+- MYSQL
+
+If you have any questions or suggestions, please contact me at chanukaranditha99@gmail.com or [Chanuka999]
+
+Happy Blogging! 🚀
